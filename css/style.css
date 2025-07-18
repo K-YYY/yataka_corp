@@ -36,3 +36,11 @@ body {
     margin-bottom: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .site-header {
+        background-color: #f00;
+    }
+    .logo {
+        width: 100px;
+    }
+}
