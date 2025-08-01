@@ -1,6 +1,7 @@
+@charset 'utf-8' ;
+
 body {
-    margin: 0;
-    font-family: Noto Sans JP;
+    font-family: 'Noto Sans JP', sans-serif;
     background-color: #fff;
     color: #333;
 }
@@ -17,8 +18,7 @@ body {
 .logo {
     width: 300px;
     height: auto;
-    display: block;
-    margin: 0;
+    vertical-align: bottom;
   }
 
 .header-right .contact-link {
@@ -32,7 +32,7 @@ body {
 
 .mailbox {
     width: 35px;
-    height: 25px;
+    height: auto;
     margin-bottom: 10px;
 }
 
@@ -57,6 +57,5 @@ body {
     .mailbox {
         margin-bottom: 0;
         width: 32px;
-        height: 22px;
     }
 }
