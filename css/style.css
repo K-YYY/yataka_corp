@@ -36,6 +36,19 @@ body {
     margin-bottom: 10px;
 }
 
+
+
+
+
+
+.site-footer {
+    background-color: #61472E;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+
 @media screen and (max-width: 768px) {
     .site-header {
         padding: 10px 20px;
@@ -58,4 +71,3 @@ body {
         margin-bottom: 0;
         width: 32px;
     }
-}
