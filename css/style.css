@@ -6,9 +6,9 @@ body {
     color: #333;
 }
 
-/* ヘッダー */
 
 .site-header {
+    /* ヘッダー */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,9 +38,9 @@ body {
     margin-bottom: 10px;
 }
 
-/* フッター */
 
 .site-footer {
+    /* フッター */
     background-color: #61472E;
     color: #fff;
     text-align: center;
