@@ -6,6 +6,8 @@ body {
     color: #333;
 }
 
+/* ヘッダー */
+
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -36,10 +38,7 @@ body {
     margin-bottom: 10px;
 }
 
-
-
-
-
+/* フッター */
 
 .site-footer {
     background-color: #61472E;
