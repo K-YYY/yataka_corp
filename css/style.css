@@ -6,7 +6,9 @@ body {
     color: #333;
 }
 
+
 .site-header {
+    /* ヘッダー */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,6 +38,16 @@ body {
     margin-bottom: 10px;
 }
 
+
+.site-footer {
+    /* フッター */
+    background-color: #61472E;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+
 @media screen and (max-width: 768px) {
     .site-header {
         padding: 10px 20px;
@@ -58,4 +70,3 @@ body {
         margin-bottom: 0;
         width: 32px;
     }
-}
