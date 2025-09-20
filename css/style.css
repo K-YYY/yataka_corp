@@ -38,6 +38,70 @@ body {
     margin-bottom: 10px;
 }
 
+.company-info{
+    /* 会社情報 */
+    background-image:
+      linear-gradient(to left, rgba(255,255,255,.95) 50%, rgba(255,255,255,.0) 100%),
+      url('/img/company-info-bg.jpg');        
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: clamp(40px,6vw,80px) 20px;
+  }
+  
+  .info-inner.two-col{
+    /* 会社情報内側 */
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: clamp(24px,4vw,48px);
+    display: flex;
+    gap: clamp(20px,4vw,48px);
+  }
+  
+  /* 左：タイトル*/
+  .info-title{
+    flex: 0 0 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .info-title h2{
+    margin: 0;
+    font-size: clamp(20px,2.2vw,28px);
+    font-weight: 700;
+    color: #333;
+    letter-spacing: .08em;
+  }
+  
+  /* 右：項目名 + 項目内容 */
+  .info-list{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 8em 1fr; 
+    column-gap: 24px;
+    row-gap: 12px;
+    font-size: 16px;
+  }
+  .info-list dt{
+    font-weight: 700;
+    color:#333;
+  }
+  .info-list dd{
+    margin: 0;
+    line-height: 1.8;
+    word-break: break-word;
+  }
+  
+  /* スマホ */
+  @media (max-width: 768px){
+    .info-inner.two-col{ flex-direction: column; }
+    .info-title{ flex: none; }
+    .info-list{ grid-template-columns: 8em 1fr; } 
+    .info-list dt{ margin-top: 10px; }
+  }
+  
+  
 
 .site-footer {
     /* フッター */
