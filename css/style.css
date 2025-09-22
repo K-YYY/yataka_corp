@@ -101,7 +101,53 @@ body {
     .info-list dt{ margin-top: 10px; }
   }
   
-  
+.contact-cta{
+  /*  ご相談・お問い合わせ  */
+  background-image:
+    linear-gradient(to left, rgba(255,255,255,.95) 50%, rgba(255,255,255,.0) 100%),
+    url('/img/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(40px,6vw,80px) 20px;
+}
+
+.cta-inner{
+  /* 中身 */
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-left: 700px; 
+  text-decoration: none;
+  color: inherit;
+}
+
+.cta-link{
+  /* テキスト */
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 700;
+  letter-spacing: .08em;
+  white-space: nowrap;
+  color: inherfit;
+  text-decoration: none;
+  padding: 6px 2px;
+}
+
+
+@media (max-width: 768px){
+  /* --- スマホ--- */
+  .contact-cta{ min-height: 160px; }
+  .cta-inner{
+    min-height: 160px;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+  }
+}
 
 .site-footer {
     /* フッター */
