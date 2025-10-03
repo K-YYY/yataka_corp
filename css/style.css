@@ -3,7 +3,7 @@
 body {
     font-family: 'Noto Sans JP', sans-serif;
     background-color: #fff;
-    color: #333;
+    color: #000;
 }
 
 
@@ -40,68 +40,189 @@ body {
 
 .company-info{
     /* 会社情報 */
+    display: flex;
+    align-items: center;
+    min-height: 384px; 
     background-image:
       linear-gradient(to left, rgba(255,255,255,.95) 50%, rgba(255,255,255,.0) 100%),
       url('/img/company-info-bg.jpg');        
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: clamp(40px,6vw,80px) 20px;
+    padding: 20px 20px;
   }
   
   .info-inner.two-col{
     /* 会社情報内側 */
-    max-width: 1100px;
-    margin: 0 auto;
-    border-radius: 8px;
-    padding: clamp(24px,4vw,48px);
     display: flex;
-    gap: clamp(20px,4vw,48px);
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 300px;
   }
   
-  /* 左：タイトル*/
   .info-title{
-    flex: 0 0 220px;
+    /* 左：会社情報タイトル */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50%;
   }
+
   .info-title h2{
-    margin: 0;
-    font-size: clamp(20px,2.2vw,28px);
-    font-weight: 700;
-    color: #333;
-    letter-spacing: .08em;
+    font-size: 36px;
   }
   
-  /* 右：項目名 + 項目内容 */
-  .info-list{
+ .info-list{
+    /* 右：項目名 + 項目内容 */
+    display:flex;
+    align-items: center;
+    width: 50%; 
+    padding-left: 40px;
+  }
+
+ .info-list-detail{
     margin: 0;
     display: grid;
-    grid-template-columns: 8em 1fr; 
-    column-gap: 24px;
-    row-gap: 12px;
+    grid-template-columns: auto 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
     font-size: 16px;
-  }
-  .info-list dt{
-    font-weight: 700;
-    color:#333;
-  }
-  .info-list dd{
-    margin: 0;
-    line-height: 1.8;
+    line-height: 1.4;
+ }
+
+ .info-list-detail dd{
     word-break: break-word;
-  }
+ }
   
   /* スマホ */
   @media (max-width: 768px){
-    .info-inner.two-col{ flex-direction: column; }
-    .info-title{ flex: none; }
-    .info-list{ grid-template-columns: 8em 1fr; } 
-    .info-list dt{ margin-top: 10px; }
+    .company-info{
+      /* 会社情報 */
+      flex-direction: column;
+      min-height: 0;
+      padding: 50px 30px;
+    }
+    .info-inner.two-col{
+      /*会社情報内側*/
+      flex-direction: column;
+      height: auto;
+    }
+
+    .info-title{
+      /* 会社情報文字位置 */
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .info-title h2{
+      /*会社情報タイトル*/
+      font-size: 24px;
+    }
+
+    .info-list{
+      /*右：項目名 + 項目内容*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .info-list-detail{
+      column-gap: 12px;
+      row-gap: 12px;
+      font-size: 12px;
+    }
   }
   
-  
+.contact-cta{
+  /*  ご相談・お問い合わせ  */
+    display: flex;
+    align-items: center;
+    min-height: 384px; 
+    background-image:
+    linear-gradient(to left, rgba(255,255,255,.95) 50%, rgba(255,255,255,.0) 100%),
+    url('/img/contact-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 20px;
+  }
+
+.cta-inner{
+  /* 中身 */
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+.cta-link{
+  /* テキスト */
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding-left: 40px; 
+  }
+
+.cta-link a {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    color: #000;
+    text-decoration: none;
+  }
+
+.cta-link a:hover{
+    opacity: 0.7
+  }
+
+.cta-link a img{
+    margin-left: 25px;
+  }
+
+
+@media (max-width: 768px){
+  /* スマホ */
+    .contact-cta{ 
+      /*ご相談・お問い合わせ*/
+      flex-direction: column;
+      min-height: 0;
+      padding: 60px 20px;
+    }
+
+    .cta-inner{
+      /*中身 */
+      flex-direction: column;
+    }
+
+    .cta-link{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .cta-link a {
+      font-size: 20px;
+    }
+
+    .cta-link a:hover{
+      opacity:0.7;
+    }
+
+    .cta-link a img{
+      width: 6px;
+      margin-left: 15px;
+    }
+}
 
 .site-footer {
     /* フッター */
@@ -134,3 +255,4 @@ body {
         margin-bottom: 0;
         width: 32px;
     }
+}
