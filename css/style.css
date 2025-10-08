@@ -38,6 +38,26 @@ body {
     margin-bottom: 10px;
 }
 
+.swiper {
+  /* KV*/
+    width: 100vw;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+
 .company-info{
     /* 会社情報 */
     display: flex;
