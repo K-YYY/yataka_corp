@@ -38,10 +38,7 @@ body {
     margin-bottom: 10px;
 }
 
-.swiper {
-  /* KV*/
-    width: 100vw;
-}
+
 
 .swiper-slide {
     display: flex;
@@ -51,7 +48,7 @@ body {
 
 .swiper-slide img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
