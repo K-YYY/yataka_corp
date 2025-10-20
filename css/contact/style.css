@@ -1,0 +1,119 @@
+@charset 'utf-8' ;
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+
+.site-header {
+    /* ヘッダー */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #61472E;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    vertical-align: bottom;
+  }
+
+.header-right .contact-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.mailbox {
+    width: 35px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+.contact{
+    /* 問い合わせセクション余白 */
+    padding: 60px 0;
+}
+
+.contact-container{
+    /* 中央コンテナ */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-title{
+    align-items: left;
+}
+
+.contact-title h2{
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.contact-notes{
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 43px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px){
+    .contact{ 
+        padding: 40px 0; 
+    }
+    .contact-title h2{ 
+        font-size: 20px; 
+    }
+    .contact-notes{
+        font-size: 13px;
+    }
+}
+
+
+.site-footer {
+    /* フッター */
+    background-color: #61472E;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+  }
+
+@media screen and (max-width: 768px) {
+    .site-header {
+        padding: 10px 20px;
+        height: 50px;
+    }
+    .logo {
+        width: 200px;
+    }
+
+    .contact-text {
+        display: none;
+    }
+
+    .contact-link {
+        justify-content: center;
+        height: 100%;
+    }
+
+    .mailbox {
+        margin-bottom: 0;
+        width: 32px;
+    }
+}
