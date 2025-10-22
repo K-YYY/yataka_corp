@@ -1,0 +1,43 @@
+@charset 'utf-8' ;
+
+
+.contact{
+    /* 問い合わせセクション余白 */
+    padding: 60px 0;
+}
+
+.contact-container{
+    /* 中央コンテナ */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-title{
+    align-items: left;
+}
+
+.contact-title h2{
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.contact-notes{
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 43px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px){
+    .contact{ 
+        padding: 40px 0; 
+    }
+    .contact-title h2{ 
+        font-size: 20px; 
+    }
+    .contact-notes{
+        font-size: 13px;
+    }
+}
+
