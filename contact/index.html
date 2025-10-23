@@ -29,16 +29,42 @@
         <div class="contact-container">
             <div class="contact-title">
                 <h2>ご相談・お問い合わせ</h2>
-                    <p class="contact-notes">
-                        必須内容をご記入の上、お問い合わせください。内容確認が終了次第、3営業日以内にご返信差し上げます。<br>
-                        お問い合わせ内容によってはお電話にて回答させていただく場合もございますので、あらかじめご了承ください。
-                    </p>
+                <p class="contact-notes">
+                    必須内容をご記入の上、お問い合わせください。内容確認が終了次第、3営業日以内にご返信差し上げます。<br>
+                    お問い合わせ内容によってはお電話にて回答させていただく場合もございますので、あらかじめご了承ください。
+                </p>
+            </div>
 
-        <!-- 問合せフォーム内容 --> 
-            <form action="program.php" method="post">
-                <dl>
-                </dl>
-            </form>
+            <!-- 問合せフォーム内容 --> 
+            <div class="contact-form">
+                <form action="program.php" method="post">
+                    <dl>
+                        <div class="form-row">
+                            <label for="name">お名前 <span class="badge badge-required">必須</span></label>
+                            <dd><input id="name" name="name" type="text" required aria-required="true" placeholder="群馬　太郎"</dd>
+                        </div>
+                        <div class="form-row">
+                            <label for="kana">フリガナ <span class="badge badge-required">必須</span></label>
+                            <dd><input id="kana" name="kana" type="text" required aria-required="true" placeholder="グンマ　タロウ"></dd>
+                        </div>
+                        <div class="form-row">
+                            <label for="company-name">会社名</label>
+                            <dd><input id="company-name" name="company-name" type="text" required aria-required="true" placeholder="ぐんま株式会社"></dd>
+                        </div>
+                        <div class="form-row">
+                            <label for="email">メールアドレス<span class="badge badge-required">必須</span></label>
+                            <dd><input id="email" name="email" type="email" required aria-required="true" placeholder="sample@test.com"></dd>
+                        </div>
+                        <div class="form-row">
+                            <label for="tel">電話番号<span class="badge badge-required">必須</span></label>
+                            <dd><input id="tel" name="tel" type="tel" required aria-required="true" placeholder="027-123-4567"></dd>
+                        </div>
+                        <div class="form-row">
+                            <label for="consultation">ご相談内容<span class="badge badge-required">必須</span></label>
+                            <dd><textarea id="consultation" name="consultation" required aria-required="true" cols="20" rows="10"></textarea></dd>
+                        </div>
+                    </dl>
+                </form>
             </div>
         </div>
     </section>
