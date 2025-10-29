@@ -38,32 +38,32 @@
             <!-- 問合せフォーム内容 --> 
             <div class="contact-form">
                 <form action="program.php" method="post">
-                    <dl>
-                        <div class="form-row">
-                            <label for="name">お名前 <span class="badge badge-required">必須</span></label>
-                            <dd><input id="name" name="name" type="text" required aria-required="true" placeholder="群馬　太郎"</dd>
-                        </div>
-                        <div class="form-row">
-                            <label for="kana">フリガナ <span class="badge badge-required">必須</span></label>
-                            <dd><input id="kana" name="kana" type="text" required aria-required="true" placeholder="グンマ　タロウ"></dd>
-                        </div>
-                        <div class="form-row">
-                            <label for="company-name">会社名</label>
-                            <dd><input id="company-name" name="company-name" type="text" required aria-required="true" placeholder="ぐんま株式会社"></dd>
-                        </div>
-                        <div class="form-row">
-                            <label for="email">メールアドレス<span class="badge badge-required">必須</span></label>
-                            <dd><input id="email" name="email" type="email" required aria-required="true" placeholder="sample@test.com"></dd>
-                        </div>
-                        <div class="form-row">
-                            <label for="tel">電話番号<span class="badge badge-required">必須</span></label>
-                            <dd><input id="tel" name="tel" type="tel" required aria-required="true" placeholder="027-123-4567"></dd>
-                        </div>
-                        <div class="form-row">
-                            <label for="consultation">ご相談内容<span class="badge badge-required">必須</span></label>
-                            <dd><textarea id="consultation" name="consultation" required aria-required="true" cols="20" rows="10"></textarea></dd>
-                        </div>
-                    </dl>
+                    <div class="form-rows"></div>
+                        <dl class="form-row">
+                            <dt><label for="name">お名前 <span class="badge badge-required">必須</span></label></dt>
+                            <dd><input id="name" name="name" type="text" required placeholder="群馬　太郎"</dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="kana">フリガナ <span class="badge badge-required">必須</span></label></dt>
+                            <dd><input id="kana" name="kana" type="text" required placeholder="グンマ　タロウ"></dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="company-name">会社名</label></dt>
+                            <dd><input id="company-name" name="company-name" type="text" required placeholder="ぐんま株式会社"></dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="email">メールアドレス<span class="badge badge-required">必須</span></label></dt>
+                            <dd><input id="email" name="email" type="email" required placeholder="sample@test.com"></dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="tel">電話番号<span class="badge badge-required">必須</span></label></dt>
+                            <dd><input id="tel" name="tel" type="tel" required placeholder="027-123-4567"></dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="consultation">ご相談内容<span class="badge badge-required">必須</span></label></dt>
+                            <dd><textarea id="consultation" name="consultation" required cols="20" rows="10"></textarea></dd>
+                        </dl>
+                    </div>
                 </form>
             </div>
         </div>

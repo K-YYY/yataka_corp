@@ -74,6 +74,8 @@
     font-size: 20px;
     box-sizing: border-box;
     background-color: #F2F2F2;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .form-row input:focus,
@@ -104,7 +106,7 @@
     }
     .contact-container{
         /* 中央コンテナ */
-        max-width: 348px;
+        max-width: none;
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -114,18 +116,20 @@
         align-items: flex-start;
         gap: 8px;
     }
-    
     .form-row label {
         min-width: auto;
     }
-    
+    .form-row dt,
+    .form-row dd {
+        width: 100%;
+    }
     .form-row input,
     .form-row textarea {
-        font-size: 20px;
+        font-size: 100%;
     }
     
     .form-row textarea {
-        width: 331px;
+        width: 100%;
     }
 }
 
