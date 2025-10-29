@@ -39,6 +39,7 @@
     color: #fff;
     border: 1px solid #FF0404;
     border-radius: 9px;
+    gap: 8px;
 }
 
 .contact-form {
@@ -50,15 +51,20 @@
     padding: 0;
 }
 
+.contact-form .form-row {
+    margin: 25px 0;
+}
+
 .form-row {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin: 20px 0;
     gap: 8px;
 }
 
 .form-row label {
     font-size: 16px;
+
 }
 
 .form-row dd {
@@ -125,11 +131,5 @@
     }
     .form-row input,
     .form-row textarea {
-        font-size: 100%;
-    }
-    
-    .form-row textarea {
         width: 100%;
     }
-}
-
