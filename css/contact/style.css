@@ -1,43 +1,132 @@
-@charset 'utf-8' ;
+@charset 'utf-8';
 
-
-.contact{
-    /* 問い合わせセクション余白 */
-    padding: 60px 0;
+.contact {
+  /* 問い合わせセクション余白 */
+  padding: 60px 0;
 }
 
-.contact-container{
+.contact-container {
+  /* 中央コンテナ */
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-title {
+  align-items: left;
+}
+
+.contact-title h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.contact-notes {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 43px;
+  margin-bottom: 32px;
+}
+
+.badge-required {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  background: #ff0404;
+  color: #fff;
+  border: 1px solid #ff0404;
+  border-radius: 9px;
+  gap: 8px;
+}
+
+.contact-form {
+  margin-top: 58px;
+}
+
+.contact-form dl {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-form .form-row {
+  margin: 25px 0;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  gap: 8px;
+}
+
+.form-row label {
+  font-size: 16px;
+}
+
+.form-row dd {
+  margin: 0;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 331px;
+  padding: 12px 16px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  font-size: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #e4dede;
+  box-shadow: 0 0 0 1px rgba(97, 71, 46, 0.2);
+}
+
+.form-row textarea {
+  min-height: 120px;
+  resize: vertical;
+  width: 100%;
+  max-width: 801px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 0;
+  }
+  .contact-title h2 {
+    font-size: 20px;
+  }
+  .contact-notes {
+    font-size: 13px;
+  }
+  .contact-container {
     /* 中央コンテナ */
-    max-width: 960px;
+    max-width: none;
     margin: 0 auto;
     padding: 0 20px;
-}
+  }
 
-.contact-title{
-    align-items: left;
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .form-row label {
+    min-width: auto;
+  }
+  .form-row dt,
+  .form-row dd {
+    width: 100%;
+  }
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+  }
 }
-
-.contact-title h2{
-    font-size: 36px;
-    margin-bottom: 16px;
-}
-
-.contact-notes{
-    font-size: 16px;
-    line-height: 1.8;
-    margin-top: 43px;
-    margin-bottom: 32px;
-}
-
-@media (max-width: 768px){
-    .contact{ 
-        padding: 40px 0; 
-    }
-    .contact-title h2{ 
-        font-size: 20px; 
-    }
-    .contact-notes{
-        font-size: 13px;
-    }
-}
-

@@ -29,16 +29,42 @@
         <div class="contact-container">
             <div class="contact-title">
                 <h2>ご相談・お問い合わせ</h2>
-                    <p class="contact-notes">
-                        必須内容をご記入の上、お問い合わせください。内容確認が終了次第、3営業日以内にご返信差し上げます。<br>
-                        お問い合わせ内容によってはお電話にて回答させていただく場合もございますので、あらかじめご了承ください。
-                    </p>
+                <p class="contact-notes">
+                    必須内容をご記入の上、お問い合わせください。内容確認が終了次第、3営業日以内にご返信差し上げます。<br>
+                    お問い合わせ内容によってはお電話にて回答させていただく場合もございますので、あらかじめご了承ください。
+                </p>
+            </div>
 
-        <!-- 問合せフォーム内容 --> 
-            <form action="program.php" method="post">
-                <dl>
-                </dl>
-            </form>
+            <!-- 問合せフォーム内容 --> 
+            <div class="contact-form">
+                <form action="program.php" method="post">
+                    <div class="form-rows">
+                        <dl class="form-row">
+                            <dt><label for="name">お名前 <span class="badge badge-required">必須</span></label></dt>
+                            <dd><input id="name" name="name" type="text" required placeholder="群馬　太郎"</dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="kana">フリガナ <span class="badge badge-required">必須</span></label></dt>
+                            <dd><input id="kana" name="kana" type="text" required placeholder="グンマ　タロウ"></dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="company-name">会社名</label></dt>
+                            <dd><input id="company-name" name="company-name" type="text" required placeholder="ぐんま株式会社"></dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="email">メールアドレス<span class="badge badge-required">必須</span></label></dt>
+                            <dd><input id="email" name="email" type="email" required placeholder="sample@test.com"></dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="tel">電話番号<span class="badge badge-required">必須</span></label></dt>
+                            <dd><input id="tel" name="tel" type="tel" required placeholder="027-123-4567"></dd>
+                        </dl>
+                        <dl class="form-row">
+                            <dt><label for="consultation">ご相談内容<span class="badge badge-required">必須</span></label></dt>
+                            <dd><textarea id="consultation" name="consultation" required cols="20" rows="10"></textarea></dd>
+                        </dl>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
