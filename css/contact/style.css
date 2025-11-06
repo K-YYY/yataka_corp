@@ -96,6 +96,121 @@
   max-width: 801px;
 }
 
+
+
+/* 個人情報セクション */
+.privacy-section{
+  margin-top: 40px;
+}
+
+.privacy-title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.privacy-lead{
+  font-size: 16px;
+  line-height: 1.8;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+/* 長文ボックス */
+.privacy-box{
+  background: #fff;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  padding: 16px;
+  max-height: 180px;    /* 長文でも崩れないように */
+  overflow: auto;       /* 長文は内側スクロール */
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+
+/* チェックボックス全体 */
+.consent-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 67px auto 67px;
+}
+
+/* ラベル全体 */
+.consent-checkbox {
+position: relative;
+display: inline-flex;
+align-items: flex-start;
+gap: 10px;
+cursor: pointer;
+user-select: none;
+}
+
+/* 擬似要素でデザインするチェックボックス */
+.consent-checkbox span::before {
+content: "";
+display: inline-block;
+vertical-align: middle;
+width: 22px;
+height: 22px;
+flex: 0 0 22px;
+background: url(/img/contact/checkbox_1.png) no-repeat center/contain;
+}
+
+/* チェックボックス非表示化 */
+input[type="checkbox"] {
+opacity: 0;
+-webkit-appearance: none;
+appearance: none;
+position: absolute;
+}
+
+/* チェック時にON画像へ差し替え */
+.consent-checkbox input[type="checkbox"]:checked + span::before{
+  background-image: url(/img/contact/checkbox_2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* キーボード操作時の可視フォーカス */
+.consent-checkbox input[type="checkbox"]:focus-visible + span::before {
+  outline: none;
+  border-color: #e4dede;
+  box-shadow: 0 0 0 1px rgba(97, 71, 46, 0.2);
+}
+
+/* 文章側の体裁 */
+.checkbox-label{
+  font-size: 16px;
+  line-height: 1.7;
+  color: #000000;
+}
+
+/* 送信ボタン（button指定） */
+.contact-submit{
+  display: block;
+  width: 399px;
+  height: 68px;
+  margin: 24px auto 100px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 4px;
+  background: #FFB855;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.contact-submit:hover{ opacity: .9; }
+
+.contact-submit:focus {
+  outline: none;
+  border-color: #e4dede;
+  box-shadow: 0 0 0 1px rgba(97, 71, 46, 0.2);
+}
+
 @media (max-width: 768px) {
   .contact {
     padding: 40px 0;
