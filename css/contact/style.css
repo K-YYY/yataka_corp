@@ -175,9 +175,9 @@ position: absolute;
 
 /* キーボード操作時の可視フォーカス */
 .consent-checkbox input[type="checkbox"]:focus-visible + span::before {
-  outline: 2px solid #8ab4f8;
-  outline-offset: 2px;
-  border-radius: 4px;
+  outline: none;
+  border-color: #e4dede;
+  box-shadow: 0 0 0 1px rgba(97, 71, 46, 0.2);
 }
 
 /* 文章側の体裁 */
@@ -196,13 +196,20 @@ position: absolute;
   padding: 12px 28px;
   border: none;
   border-radius: 4px;
-  background: #FFB855; /* カンプの雰囲気に合わせて調整可 */
+  background: #FFB855;
   color: #000000;
   font-size: 20px;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 .contact-submit:hover{ opacity: .9; }
 
+.contact-submit:focus {
+  outline: none;
+  border-color: #e4dede;
+  box-shadow: 0 0 0 1px rgba(97, 71, 46, 0.2);
+}
 
 @media (max-width: 768px) {
   .contact {
