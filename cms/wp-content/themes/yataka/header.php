@@ -1,4 +1,3 @@
-<?php wp_head(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -25,7 +24,8 @@
     <?php else: ?>
 	<meta property="og:type" content="article">
     <?php endif; ?>
-    <meta property="og:site_name" content="<?=get_bloginfo('name'); ?> <?=get_bloginfo( 'description'); ?>">
+    <meta property="og:image" content="<?=get_template_directory_uri()?>/img/ogp.png">
+    <meta property="og:site_name" content="<?=get_bloginfo('name'); ?>">
     <meta property="og:locale" content="ja_JP">
 
     <link href="<?=get_template_directory_uri()?>/css/reset.css"  rel="stylesheet" />
@@ -48,6 +48,8 @@
     <?php elseif ( is_page('contact') ): ?>
     <script src="<?=get_template_directory_uri()?>/js/contact/script.js"></script>
     <?php endif; ?>
+    
+<?php wp_head(); ?>
 
 </head>
 

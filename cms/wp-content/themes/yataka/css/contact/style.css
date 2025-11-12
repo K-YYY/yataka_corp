@@ -293,9 +293,10 @@
 }
 
 .wpcf7-spinner {
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   left: 50%;
+  margin: auto !important;
   transform: translate(-50%, -50%);
 }
 
