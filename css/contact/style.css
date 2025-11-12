@@ -1,4 +1,4 @@
-@charset 'utf-8';
+@charset "utf-8";
 
 .contact {
   /* 問い合わせセクション余白 */
@@ -45,12 +45,7 @@
   margin-top: 58px;
 }
 
-.contact-form dl {
-  margin: 0;
-  padding: 0;
-}
-
-.contact-form .form-row {
+.contact-form .form-rows {
   margin: 25px 0;
 }
 
@@ -58,7 +53,12 @@
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  padding: 0;
   gap: 8px;
+}
+
+.form-row:first-child {
+  margin-top: 0;
 }
 
 .form-row label {
@@ -93,23 +93,22 @@
   min-height: 120px;
   resize: vertical;
   width: 100%;
-  max-width: 801px;
+  max-width: 800px;
+  line-height: 1.4;
 }
 
-
-
 /* 個人情報セクション */
-.privacy-section{
+.privacy-section {
   margin-top: 40px;
 }
 
-.privacy-title{
+.privacy-title {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-.privacy-lead{
+.privacy-lead {
   font-size: 16px;
   line-height: 1.8;
   color: #000000;
@@ -117,17 +116,31 @@
 }
 
 /* 長文ボックス */
-.privacy-box{
+.privacy-box {
   background: #fff;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   border-radius: 4px;
   padding: 16px;
-  max-height: 180px;    /* 長文でも崩れないように */
-  overflow: auto;       /* 長文は内側スクロール */
-  font-size: 16px;
+  max-height: 180px; /* 長文でも崩れないように */
+  overflow: auto; /* 長文は内側スクロール */
+  font-size: 14px;
   line-height: 1.9;
 }
 
+.privacy-box dt {
+  margin-top: 1.5em;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.privacy-box ol {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+.privacy-box ol li::marker {
+  font-weight: 700;
+}
 
 /* チェックボックス全体 */
 .consent-field {
@@ -138,77 +151,152 @@
 }
 
 /* ラベル全体 */
-.consent-checkbox {
-position: relative;
-display: inline-flex;
-align-items: flex-start;
-gap: 10px;
-cursor: pointer;
-user-select: none;
-}
-
-/* 擬似要素でデザインするチェックボックス */
-.consent-checkbox span::before {
-content: "";
-display: inline-block;
-vertical-align: middle;
-width: 22px;
-height: 22px;
-flex: 0 0 22px;
-background: url(/img/contact/checkbox_1.png) no-repeat center/contain;
-}
-
-/* チェックボックス非表示化 */
-input[type="checkbox"] {
-opacity: 0;
--webkit-appearance: none;
-appearance: none;
-position: absolute;
-}
-
-/* チェック時にON画像へ差し替え */
-.consent-checkbox input[type="checkbox"]:checked + span::before{
-  background-image: url(/img/contact/checkbox_2.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* キーボード操作時の可視フォーカス */
-.consent-checkbox input[type="checkbox"]:focus-visible + span::before {
-  outline: none;
-  border-color: #e4dede;
-  box-shadow: 0 0 0 1px rgba(97, 71, 46, 0.2);
-}
-
-/* 文章側の体裁 */
-.checkbox-label{
+.consent-field label {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
   font-size: 16px;
   line-height: 1.7;
   color: #000000;
 }
 
+/* チェックボックス非表示化 */
+.consent-field input[type="checkbox"] {
+  opacity: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+/* 擬似要素でデザインするチェックボックス */
+.consent-field input[type="checkbox"] + span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.consent-field input[type="checkbox"] + span::before {
+  content: "";
+  display: inline-block;
+  margin-top: 3px;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  background: url(../../img/contact/checkbox_1.png) no-repeat center/contain;
+}
+
+/* チェック時にON画像へ差し替え */
+.consent-field input[type="checkbox"]:checked + span::before {
+  background-image: url(../../img/contact/checkbox_2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* キーボード操作時の可視フォーカス */
+.consent-field input[type="checkbox"]:focus + span::before {
+  outline: none;
+  border-color: #e4dede;
+  box-shadow: 0 0 0 1px rgba(97, 71, 46, 0.2);
+}
+
+.consent-field input[type="checkbox"] + span::after {
+  content: "必須";
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  background: #ff0404;
+  color: #fff;
+  border: 1px solid #ff0404;
+  border-radius: 9px;
+}
+
 /* 送信ボタン（button指定） */
-.contact-submit{
+.form-button {
+  position: relative;
+  margin: 0 auto 100px;
+}
+
+/* 個人情報セクション */
+.contact-submit {
   display: block;
   width: 399px;
   height: 68px;
-  margin: 24px auto 100px;
+  margin: auto;
   padding: 12px 28px;
   border: none;
   border-radius: 4px;
-  background: #FFB855;
+  background: #ffb855;
   color: #000000;
   font-size: 20px;
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
 }
-.contact-submit:hover{ opacity: .9; }
+
+.contact-submit[disabled] {
+  background: #d3d3d3;
+}
+
+.contact-submit:hover {
+  opacity: 0.9;
+}
 
 .contact-submit:focus {
   outline: none;
   border-color: #e4dede;
   box-shadow: 0 0 0 1px rgba(97, 71, 46, 0.2);
+}
+
+/* ContactForm7の独自スタイオルオーバーライド */
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.wpcf7-not-valid {
+  border: 1px solid #ff0404 !important;
+}
+
+.wpcf7-not-valid-tip {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #ff0404;
+}
+
+.wpcf7-response-output {
+  order: -1;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.sent .wpcf7-response-output {
+  display: block;
+  padding: 40px !important;
+  background: #28a745;
+  color: #fff;
+  font-size: 16px;
+}
+
+.invalid .wpcf7-response-output,
+.unaccepted .wpcf7-response-output {
+  display: block;
+  padding: 40px !important;
+  background: #ff0404;
+  color: #fff;
+  font-size: 16px;
+}
+
+.wpcf7-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 768px) {
