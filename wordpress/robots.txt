@@ -1,0 +1,16 @@
+# Google, Bing, Yahoo, Baidu の公式クローラのみ許可
+User-agent: Googlebot
+Disallow:
+
+User-agent: Bingbot
+Disallow:
+
+User-agent: Slurp
+Disallow:
+
+User-agent: Baiduspider
+Disallow:
+
+# 上記以外のクローラはアクセス禁止
+User-agent: *
+Disallow: /
