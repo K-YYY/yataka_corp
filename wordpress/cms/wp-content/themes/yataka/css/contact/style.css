@@ -217,6 +217,7 @@
 
 /* 送信ボタン（button指定） */
 .form-button {
+  width: 100%;
   position: relative;
   margin: 0 auto 100px;
 }
@@ -331,6 +332,10 @@
   }
   .form-row input,
   .form-row textarea {
+    width: 100%;
+  }
+
+  .contact-submit {
     width: 100%;
   }
 }
