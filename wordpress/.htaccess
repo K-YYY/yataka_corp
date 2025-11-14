@@ -1,9 +1,3 @@
-AuthUserFile /home/users/1/cocotte.jp-yyk178494/web/.htpasswd
-AuthGroupFile /dev/null
-AuthName "enter password"
-AuthType Basic
-require valid-user
-
 RewriteEngine On
 # -----------------------------------------
 # www あり → www なし にリダイレクト
@@ -31,19 +25,3 @@ RewriteRule ^(.*)$ https://yataka-bussan.jp/$1 [R=301,L]
     Header set Pragma "no-cache"
     Header set Expires 0
 </IfModule>
-
-# BEGIN WordPress
-# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
-# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
-# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-</IfModule>
-
-# END WordPress
